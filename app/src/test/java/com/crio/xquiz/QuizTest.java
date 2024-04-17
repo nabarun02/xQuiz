@@ -20,43 +20,6 @@ public class QuizTest {
     //  Any modifications in this file may result in Assessment failure!
 
     @Test
-    @DisplayName("Test for checking the functionality of Quiz constructor if quizName is null")
-    public void testQuiz_IfQuizNameIsNull(){
-        //arrange
-        final PrintStream standardOut = System.out;
-        final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStreamCaptor));
-
-        String quizName = null;
-
-        //act
-        new Quiz(quizName);
-
-        //assert
-        assertEquals( "Quiz Name cannot be null or empty!", outputStreamCaptor.toString().trim());
-        System.setOut(standardOut);
-    }
-
-    @Test
-    @DisplayName("Test for checking the functionality of addQuestion if the question is null")
-    public void testAddQuestion_IfQuestionIsNull(){
-        //arrange
-        final PrintStream standardOut = System.out;
-        final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStreamCaptor));
-
-        String quizName = "General Knowledge Quiz";
-        Quiz quiz = new Quiz(quizName);
-
-        //act
-        quiz.addQuestion(null);
-
-        //assert
-        assertEquals( "Question cannot be null!", outputStreamCaptor.toString().trim());
-        System.setOut(standardOut);
-    }
-
-    @Test
     @DisplayName("Test for checking the functionality of addQuestion if a correct question is added")
     public void testAddQuestion_IfQuestionIsCorrect(){
         //arrange

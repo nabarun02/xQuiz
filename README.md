@@ -19,6 +19,6 @@ xQuiz is a terminal-based quiz application built in Java as part of my journey t
 
 # Run the App
 
-# bash
+```bash
 - javac App.java
 - java App
